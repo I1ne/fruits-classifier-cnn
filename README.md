@@ -70,5 +70,5 @@ Flatten → Dense(256) → Dropout(0.5) → Dense(1, sigmoid)
 
 ## Ссылки
 
-Блокнот в Google Colab
-Датасет Fruits 360 на Kaggle
+[Блокнот в Google Colab](https://colab.research.google.com/drive/1XA-I5G6U_B4vlKALoPlVwW2fdpXNyWKx?usp=sharing)
+[Датасет Fruits 360 на Kaggle](https://www.kaggle.com/datasets/moltean/fruits)
