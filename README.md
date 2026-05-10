@@ -6,7 +6,6 @@
 **Университет:** РЭУ им. Г. В. Плеханова, ВШКМиС  
 **Дисциплина:** Системы искусственного интеллекта  
 **Автор:** Нетиевский Иван Сергеевич  
-**Группа:** 15.27Д-БИ09/22б  
 **Стек:** Python, TensorFlow/Keras, NumPy, Matplotlib, KaggleHub  
 
 ## Задача
@@ -22,3 +21,56 @@
 ## Архитектуры моделей
 
 ### Модель 1 (простая)
+
+Conv2D(32) → MaxPooling2D → Flatten → Dense(128) → Dense(1, sigmoid)
+
+text
+
+### Модель 2 (углублённая с регуляризацией)
+Conv2D(32) → MaxPooling2D →
+Conv2D(64) → MaxPooling2D →
+Conv2D(128) → MaxPooling2D →
+Flatten → Dense(256) → Dropout(0.5) → Dense(1, sigmoid)
+
+text
+
+## Результаты
+
+| Модель | Val Accuracy | Val Loss |
+|--------|--------------|----------|
+| Модель 1 | 1.0 | 3.38e-06 |
+| Модель 2 | 1.0 | **2.12e-07** |
+
+Обе модели достигли 100% точности на валидационной выборке. Вторая модель показывает значительно меньший уровень ошибки и лучшую уверенность предсказаний.
+
+## Как запустить
+
+1. Клонируйте репозиторий:
+   ```bash
+   git clone https://github.com/I1ne/fruits-classifier-cnn.git
+   cd fruits-classifier-cnn
+Установите зависимости (рекомендуется Google Colab или локально с GPU):
+
+bash
+pip install tensorflow numpy matplotlib kagglehub
+Откройте ноутбук Fruits_360_CNN.ipynb в Jupyter или Google Colab.
+
+Запустите ячейки последовательно – датасет загрузится автоматически через kagglehub.
+
+Примечание: для загрузки датасета через kagglehub потребуется файл kaggle.json (API-ключ Kaggle).
+
+Файлы
+text
+├── Fruits_360_CNN.ipynb   # Основной ноутбук с полным пайплайном
+├── docs/
+│   └── report.pdf         # Полный текст отчёта по проекту
+└── README.md
+Ссылки
+Блокнот в Google Colab
+
+Датасет Fruits 360 на Kaggle
+
+Контакты
+Автор: Иван Нетиевский
+GitHub: @I1ne
+Email: i.netievskiy@yandex.ru
