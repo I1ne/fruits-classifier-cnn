@@ -59,11 +59,12 @@ Flatten → Dense(256) → Dropout(0.5) → Dense(1, sigmoid)
 Примечание: для загрузки датасета через kagglehub потребуется файл kaggle.json (API-ключ Kaggle).
 
 ## Файлы
+
  ```bash
-.
-├── Fruits_360_CNN.ipynb   # Основной ноутбук с полным пайплайном
-├── report.pdf         # Полный текст отчёта по проекту
-└── README.md
+ .
+ ├── Fruits_360_CNN.ipynb   # Основной ноутбук с полным пайплайном
+ ├── report.pdf         # Полный текст отчёта по проекту
+ └── README.md
  ```
 
 
